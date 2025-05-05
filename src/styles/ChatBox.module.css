@@ -1,0 +1,117 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  height: 80vh;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f7f7f7; /* Light background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.chatBox {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #ffffff; /* White chat area */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  padding: 10px 15px;
+  border-radius: 8px;
+  max-width: 75%;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease-in-out;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.user {
+  background: #0078ff;
+  color: white;
+  align-self: flex-end;
+}
+
+.ai {
+  background: #e0e0e0; /* Light gray for AI messages */
+  color: black;
+  align-self: flex-start;
+}
+
+.loading {
+  font-size: 14px;
+  color: #666;
+  align-self: center;
+  padding: 5px;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #f0f0f0; /* Slightly darker input area */
+  border-top: 1px solid #ddd;
+  gap: 8px;
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🎙️ Mic Button */
+.micButton {
+  background: transparent;
+  border: none;
+  color: #0078ff;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.micButton:hover {
+  color: #005ecb;
+}
+
+/* 📩 Send Button */
+.sendButton {
+  background: #0078ff;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.sendButton:hover {
+  background: #005ecb;
+}
+
+/* 🔄 Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
